@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/product.css">
+    <script src="/static/script/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/slick.css"/>
+    <title>RETRO-STORE | {{product_name}}</title>
+</head>
+<body class="body">
+    <!-- Шапка -->
+    <header class="body__header header">
+        <!-- Заголовок сайта -->
+        <h1 class="header__title">RETRO-STORE</h1>
+        <!-- Бургер-меню -->
+        <div class="burger-menu">
+            <span></span>
+        </div>
+        <!-- Навигация -->
+        <nav class="header__nav header-nav">
+            <ul class="header-nav__list header-list">
+                <li class="header-list__item header-list-item">
+                    <a class="header-list-item__link" href="/"><b>Главная</b></a>
+                </li>
+                <li class="header-list__item header-list-item">
+                    <a class="header-list-item__link" href="/shop">Магазин</a>
+                </li>
+                <li class="header-list__item header-list-item">
+                    <a class="header-list-item__link" href="/about">О нас</a>
+                </li>
+                <li class="header-list__item header-list-item">
+                    <a class="header-list-item__link" href="/">Корзина</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Главная часть -->
+    <main class="body__main main">
+        <!-- Товар -->
+        <section class="main__section-product product-section">
+            <img src="/{{product_image_path}}" alt="Картинка товара" class="product-section__image">
+            <span class="product-section__info info">
+                <h2 class="info__name section-title">{{product_name}}</h2>
+                <p class="info__price">{{product_price}}</p>
+                <p class="info__description">{{product_desc}}</p>
+                <button class="info__to-cart dark-button">Купить</button>
+            </span>
+        </section>
+    </main>
+    <!-- Подвал -->
+    <footer class="body__footer footer">
+        <!--Навигация-->
+        <nav class="footer__nav footer-nav">
+            <ul class="footer-nav__list footer-list">
+                <li class="footer-list__item footer-list-item">
+                    <a href="/" class="footer-list-item__link"><b>Главная</b></a>
+                </li>
+                <li class="link-list__ifooter-list__item footer-list-itemtem">
+                    <a href="/shop" class="footer-list-item__link">Магазин</a>
+                </li>
+                <li class="link-list__ifooter-list__item footer-list-itemtem">
+                    <a href="/about" class="footer-list-item__link">О нас</a>
+                </li>
+                <li class="link-list__ifooter-list__item footer-list-itemtem">
+                    <a href="/" class="footer-list-item__link">Блог</a>
+                </li>
+            </ul>
+        </nav>
+        <!--Контакты-->
+        <p class="footer__contacts">
+            36, Кутузовский проспект, <br>Москва, 684129<br><br>
+            Email : info@retrostore.com<br>
+            Телефон: +7-000-000-00-00
+        </p>
+        <!--Соц. сети-->
+        <p class="footer__sm sm"> <!--sm - social media-->
+                <a class="sm__link" href="https://x.com">X (Twitter)</a>, 
+                <a class="sm__link" href="https://facebook.com">Facebook</a>, 
+                <a class="sm__link" href="https://instagram.com">Instagram</a><br>
+                (Запрещены на территории РФ)
+        </p>
+        <!--Рассылка-->
+        <div class="footer__newsletter nwsltr">
+            <p class="nwsltr__title">Рассылка</p>
+            <form action="#nwsltr-form" class="nwsltr__form nwsltr-form" id="nwsltr-form">
+                <input required type="email" placeholder="Email" name="email" class="nwsltr-form__email">
+                <button class="nwsltr-form__submit" type="submit">Подписаться</button>
+            </form>
+        </div>
+    </footer>
+    <script src="/static/script/script.js"></script>
+    <script src="/static/script/render-product.js"></script>
+</body>
+</html>

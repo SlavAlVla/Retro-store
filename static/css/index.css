@@ -1,0 +1,138 @@
+/* Переменные */
+:root {
+    --bg-color: #FFF9C5;
+    --dark-accent: #CCA24C;
+    --main-color: #C04809;
+    --light-accent: #D2CDA1;
+    --font-color: #3D413C;
+    --cat-section-height: 40vw;
+}
+
+/* Лучший продукт */
+.best-product__image {
+    width: 50vw;
+    padding-top: 3%;
+}
+
+/* Категории */
+.cats-list {
+    width: 80%;
+    height: var(--cat-section-height);
+    margin: 5% 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    z-index: -1;
+}
+
+.cats-list__cat {
+    position: relative;
+}
+
+.big-cat {
+    width: 48%;
+    height: calc(var(--cat-section-height) * 0.59);
+}
+
+.small-cat {
+    width: 30%;
+    height: calc(var(--cat-section-height) * 0.26);
+    margin-top: calc(var(--cat-section-height) * 0.15);
+}
+
+.cat__link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.cat__title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: var(--section-title-size);
+    background-color: var(--light-accent);
+    padding: 2%;
+}
+
+.cats-list__cat img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Преимущества компании */
+.pop__advantage-list {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    padding: 9% 0 10% 0;
+}
+
+.advantage-list__advantage {
+    width: 33%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.advantage__image {
+    width: 25%;
+    padding-bottom: 25px;
+}
+
+.advantage__name {
+    text-align: center;
+    font-weight: 800;
+}
+
+
+/* Адаптация под смартфоны */
+@media (max-width: 767px) {
+
+    /* Лучший продукт */
+    .best-product__image {
+        width: 90vw;
+        padding: 10% 0 5% 0;
+    }
+
+    /* Категории  */
+    .cats__cats-list {
+        height: auto;
+        flex-flow: column wrap;
+        align-items: center;
+        padding: 12% 0;
+    }
+
+    .cats-list__cat {
+        width: 64vw;
+        height: 64vw;
+        margin-top: 30px;
+    }
+
+    /* Преимущества компании */
+    .pop__advantage-list {
+        flex-flow: column wrap;
+        padding: 9% 0 15% 0;
+    }
+
+    .advantage-list__advantage {
+        width: 100%;
+        padding-top: 15%;
+    }
+
+    .advantage-list__advantage:first-child {padding-top: 0;}
+
+    .advantage__image {
+        width: 35%;
+        padding-bottom: 5px;
+    }
+}
+
+/* Алаптация под планшеты */
+@media (min-width: 768px) and (max-width: 1199px) {
+    :root {
+        --cat-section-height: 64vw;
+    }
+}

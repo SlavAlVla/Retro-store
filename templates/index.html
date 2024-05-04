@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/index.css">
+    <script src="static/script/jquery.min.js"></script>
+    <script src="static/script/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="static/css/slick.css"/>
+    <title>RETRO-STORE</title>
+</head>
+<body class="body">
+    <!-- Шапка -->
+    <header class="body__header header">
+        <!-- Заголовок сайта -->
+        <h1 class="header__title">RETRO-STORE</h1>
+        <!-- Бургер-меню -->
+        <div class="burger-menu">
+            <span></span>
+        </div>
+        <!-- Навигация -->
+        <nav class="header__nav header-nav">
+            <ul class="header-nav__list header-list">
+                <li class="header-list__item header-list-item">
+                    <a class="header-list-item__link" href="/"><b>Главная</b></a>
+                </li>
+                <li class="header-list__item header-list-item">
+                    <a class="header-list-item__link" href="/shop">Магазин</a>
+                </li>
+                <li class="header-list__item header-list-item">
+                    <a class="header-list-item__link" href="/about">О нас</a>
+                </li>
+                <li class="header-list__item header-list-item">
+                    <a class="header-list-item__link" href="/">Корзина</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Главная часть -->
+    <main class="body__main main">
+        <!-- Лучший товар -->
+        <section class="main__section-best-product best-product">
+            <img class="best-product__image" src="static/images/toys/retro-car.png" alt="игрушечный автомобиль">
+            <a href='/products/car' class="best-product__buy dark-button">Купить сейчас</a>
+        </section>
+        <!-- Новинки -->
+        <section class="main__section-news news">
+            <!-- Заголовок -->
+            <h2 class="news__title section-title">НОВИНКИ</h2>
+            <!-- Каталог новинок -->
+            <ul class="news__news-list news-list products-list">
+                <figcaption class="news-list__product product" id="clock">
+                    <img src="static/images/desk/retro-clock.png" alt="часы" class="product__image">
+                    <p class="product__name product-name">Ретро часы</p>
+                    <p class="product__price product-price">₽3499.00</p>
+                </figcaption>
+                <figcaption class="news-list__product product" id="cap">
+                    <img src="static/images/clothes/headdress/retro-cap.png" alt="кепка" class="product__image">
+                    <p class="product__name product-name">Ретро кепка</p>
+                    <p class="product__price product-price">₽999.00</p>
+                </figcaption>
+                <figcaption class="news-list__product product" id="pendant">
+                    <img src="static/images/accessories/retro-pendant.png" alt="подвеска" class="product__image">
+                    <p class="product__name product-name">Ретро подвеска</p>
+                    <p class="product__price product-price">₽4999.00</p>
+                </figcaption>
+            </ul>
+            <!-- Кнопка "больше" -->
+            <a href='/shop' class="new-products__more-button light-button">Больше</a>
+        </section>
+        <!-- Секция категорий -->
+        <section class="main__section-cats cats">
+            <!-- Категории -->
+            <ul class="cats__cats-list cats-list">
+                <div class="cats-list__cat big-cat">
+                    <a href="/about" class="cat__link"></a>
+                    <img class="cat__bg-image" src="static/images/story-block.png" alt="Блок история">
+                    <h3 class="cat__title">История</h3>
+                </div>
+                <div class="cats-list__cat big-cat">
+                    <img class="cat__bg-image" src="static/images/blog-block.png" alt="Блок блог">
+                    <h3 class="cat__title">Блог</h3>
+                </div>
+                <div class="cats-list__cat small-cat">
+                    <img class="cat__bg-image" src="static/images/accessories-block.png" alt="Блок аксессуары">
+                    <h3 class="cat__title">Аксессуары</h3>
+                </div>
+                <div class="cats-list__cat small-cat">
+                    <img class="cat__bg-image" src="static/images/shoes-block.png" alt="Блок обувь">
+                    <h3 class="cat__title">Обувь</h3>
+                </div>
+                <div class="cats-list__cat small-cat">
+                    <img class="cat__bg-image" src="static/images/jacket-block.png" alt="Блок куртки">
+                    <h3 class="cat__title">Куртки</h3>
+                </div>
+            </ul>
+        </section>
+        <!-- Секция популярных товаров -->
+        <section class="main__section-pop pop">
+            <!-- Заголовок -->
+            <h2 class="pop__title section-title">ПОПУЛЯРНЫЕ ТОВАРЫ</h2>
+            <!-- Каталог товаров-->
+            <ul class="pop__pop-list pop-list products-list">
+                <figcaption class="pop-list__product product" id="bottle-stand">
+                    <img src="static/images/desk/retro-bottle-stand.png" alt="подставка для бутылок" class="product__image">
+                    <p class="product__name product-name">Подставка для бутылок в стиле ретро</p>
+                    <p class="product__price product-price">₽3999</p>
+                </figcaption>
+                <figcaption class="pop-list__product product" id="gramophone">
+                    <img src="static/images/desk/retro-gramophone.png" alt="грамофон" class="product__image">
+                    <p class="product__name product-name">Ретро граммофон</p>
+                    <p class="product__price product-price">₽3499</p>
+                </figcaption>
+                <figcaption class="pop-list__product product" id="fortune">
+                    <img src="static/images/desk/retro-fortune.png" alt="статуэтка богини Фортуны" class="product__image">
+                    <p class="product__name product-name">Статуэтка богини Фортуны</p>
+                    <p class="product__price product-price">₽1799</p>
+                </figcaption>
+                <figcaption class="pop-list__product product" id="plane">
+                    <img src="static/images/toys/retro-plane.png" alt="фигурка самолёта" class="product__image">
+                    <p class="product__name product-name">Фигурка ретро самолета</p>
+                    <p class="product__price product-price">₽899</p>
+                </figcaption>
+                <figcaption class="pop-list__product product" id="globe">
+                    <img src="static/images/desk/retro-globe.png" alt="глобус" class="product__image">
+                    <p class="product__name product-name">Ретро глобус</p>
+                    <p class="product__price product-price">₽999</p>
+                </figcaption>
+                <figcaption class="pop-list__product product" id="tiger">
+                    <img src="static/images/toys/retro-tiger.png" alt="статуэтка тигра-джентльмена" class="product__image">
+                    <p class="product__name product-name">Статуэтка тигра-джентльмена</p>
+                    <p class="product__price product-price">₽1499</p>
+                </figcaption>
+            </ul>
+            <!-- Кнопка "больше" -->
+            <a href='/shop' class="more__more-button light-button">Больше</a>
+            <!-- Преимущества -->
+            <ul class="pop__advantage-list advantage-list">
+                <figcaption class="advantage-list__advantage advantage">
+                    <img class="advantage__image" src="static/images/safe-pay.png" alt="защищенная оплата">
+                    <p class="advantage__name">Защищенная оплата</p>
+                </figcaption>
+                <figcaption class="advantage-list__advantage advantage">
+                    <img class="advantage__image" src="static/images/free-delivery.png" alt="бесплатная доставка и возврат">
+                    <p class="advantage__name">Бесплатная доставка и возврат</p>
+                </figcaption>
+                <figcaption class="advantage-list__advantage advantage">
+                    <img class="advantage__image" src="static/images/service.png" alt="обслуживание 24 на 7">
+                    <p class="advantage__name">Обслуживание 24/7</p>
+                </figcaption>
+            </ul>
+        </section>
+    </main>
+    <!-- Подвал -->
+    <footer class="body__footer footer">
+        <!--Навигация-->
+        <nav class="footer__nav footer-nav">
+            <ul class="footer-nav__list footer-list">
+                <li class="footer-list__item footer-list-item">
+                    <a href="/" class="footer-list-item__link"><b>Главная</b></a>
+                </li>
+                <li class="link-list__ifooter-list__item footer-list-itemtem">
+                    <a href="/shop" class="footer-list-item__link">Магазин</a>
+                </li>
+                <li class="link-list__ifooter-list__item footer-list-itemtem">
+                    <a href="/about" class="footer-list-item__link">О нас</a>
+                </li>
+                <li class="link-list__ifooter-list__item footer-list-itemtem">
+                    <a href="/" class="footer-list-item__link">Блог</a>
+                </li>
+            </ul>
+        </nav>
+        <!--Контакты-->
+        <p class="footer__contacts">
+            36, Кутузовский проспект, <br>Москва, 684129<br><br>
+            Email : info@retrostore.com<br>
+            Телефон: +7-000-000-00-00
+        </p>
+        <!--Соц. сети-->
+        <p class="footer__sm sm"> <!--sm - social media-->
+                <a class="sm__link" href="https://x.com">X (Twitter)</a>, 
+                <a class="sm__link" href="https://facebook.com">Facebook</a>, 
+                <a class="sm__link" href="https://instagram.com">Instagram</a><br>
+                (Запрещены на территории РФ)
+        </p>
+        <!--Рассылка-->
+        <div class="footer__newsletter nwsltr">
+            <p class="nwsltr__title">Рассылка</p>
+            <form action="#nwsltr-form" class="nwsltr__form nwsltr-form" id="nwsltr-form">
+                <input required type="email" placeholder="Email" name="email" class="nwsltr-form__email">
+                <button class="nwsltr-form__submit" type="submit">Подписаться</button>
+            </form>
+        </div>
+    </footer>
+    <script src="static/script/script.js"></script>
+</body>
+</html>

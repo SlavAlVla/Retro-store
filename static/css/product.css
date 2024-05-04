@@ -1,0 +1,76 @@
+.product-section {
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.product-section__image {
+    flex: 25;
+    align-self: center;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    background-color: var(--dark-accent);
+    border: var(--font-color) solid 8px;
+    border-radius: 2vw;
+    margin-right: 3vw;
+}
+
+.info {
+    flex: 27;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 3vw;
+}
+
+.info>* {
+    margin-bottom: 40px;
+}
+
+.info__name {
+    text-align: left;
+}
+
+.info__price {
+    display: inline;
+    color: var(--main-color);
+    font-size: calc(var(--main-font-size) + 0.5vw);
+    font-weight: 800;
+    background-color: var(--light-accent);
+    padding: 10px;
+    border: var(--font-color) solid 4px;
+    border-radius: 2vw;
+}
+
+/* Адаптация под смартфоны */
+@media (max-width: 767px) {
+    .product-section {
+        flex-flow: column wrap;
+    }
+    
+    .product-section__image {
+        width: 80vw;
+        border: var(--font-color) solid 5px;
+        border-radius: 2vw;
+        margin: 20px 0 0 0;
+    }
+    
+    .info {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+    
+    .info>* {
+        margin-bottom: 20px;
+    }
+    
+    .info__name {
+        text-align: center;
+    }
+    
+    .info__price {
+        font-size: calc(var(--main-font-size) + 2vw);
+    }
+
+    .info__description {text-align: justify;}
+}
