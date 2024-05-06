@@ -57,7 +57,7 @@
                 {% for product in assort[category]["products"] %}
                 <figcaption class="products-list__product product">
                     <a href="/products/{{category}}/{{product}}" class="product__link"></a>
-                    <img src="{{static/images/{{category}}/{{product}}.png}}" alt="{{product}}" class="product__image">
+                    <img src="static/images/{{category}}/{{product}}.png" alt="{{product}}" class="product__image">
                     <p class="product__name">{{assort[category]['products'][product]["name"]}}</p>
                     <p class="product__price">{{assort[category]['products'][product]["price"]}}</p>
                 </figcaption>

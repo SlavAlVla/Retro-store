@@ -18,10 +18,10 @@ def index():
     with open('data/assort.json', 'r', encoding='utf-8') as f:
         assort = json.load(f)
         popular = []
-        for i in range(7):
+        for i in range(6):
             rand_category = random.choice(list(assort.keys()))
             rand_product = random.choice(list(assort[rand_category]['products'].keys()))
-            popular.append({'category': rand_category, 'product': assort[rand_category]['products'][rand_product]})
+            popular.append({'category': rand_category, 'product': assort[rand_category]['products'][rand_product], 'id': rand_product})
             assort[rand_category]['products'].pop(rand_product)
             if assort[rand_category]['products'] == {}:
                 assort.pop(rand_category)

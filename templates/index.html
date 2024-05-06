@@ -105,10 +105,10 @@
             <ul class="pop__pop-list pop-list products-list">
                 {% for product in popular %}
                 <figcaption class="products-list__product product">
-                    <a href="/products/{{product['category']}}/{{product['product']}}" class="product__link"></a>
-                    <img src="product" alt="{{product}}" class="product__image">
-                    <p class="product__name">{{assort[category]['products'][product]["name"]}}</p>
-                    <p class="product__price">{{assort[category]['products'][product]["price"]}}</p>
+                    <a href="/products/{{product['category']}}/{{product['id']}}" class="product__link"></a>
+                    <img src="{{product['product']['image_path']}}" alt="{{product['id']}}" class="product__image">
+                    <p class="product__name">{{product['product']["name"]}}</p>
+                    <p class="product__price">{{product['product']["price"]}}</p>
                 </figcaption>
                 {% endfor %}
             </ul>
