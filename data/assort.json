@@ -1,0 +1,60 @@
+{
+  "accessories": {
+    "name": "Аксессуары",
+    "products": {
+      "bike-glasses": {
+        "image_path": "static/images/accessories/bike-glasses.png",
+        "name": "Мотоциклетные очки",
+        "price": "₽1499.00",
+        "desc": "Очки мотоциклетные, выполненные в стиле ретро из высококачественного пластика. Носятся на регулируемой резинке."
+      },
+      "amber-pendant": {
+        "image_path": "static/images/accessories/amber-pendant.png",
+        "name": "Янтарная подвеска",
+        "price": "₽4999.00",
+        "desc": "Подвеска в стиле ретро. Подвеска выполнена из меди, стекла и янтаря"
+      },
+      "hippy-earrings": {
+        "image_path": "static/images/accessories/hippy-earrings.png",
+        "name": "Хипстерские серьги",
+        "price": "₽1999.00",
+        "desc": "Серьги в стиле хиппи, ретро, выполнены из металла и керамики."
+      },
+      "fairy-ring": {
+        "image_path": "static/images/accessories/fairy-ring.png",
+        "name": "Кольцо \"Сказка\"",
+        "price": "₽2999.00",
+        "desc": "Кольцо сказочной тематики ручной работы. Изготовлен из стали."
+      }
+    }
+  },
+  "toys": {
+    "name": "Игрушки",
+    "products": {
+      "retro-toy-car": {
+        "image_path": "static/images/toys/retro-toy-car.png",
+        "name": "Игрушечный ретро-автомобиль",
+        "price": "₽2499.00",
+        "desc": "Игрушечный автомобиль в стиле ретро на радиоуправлении. Корпус металлический, колеса резиновые."
+      },
+      "retro-toy-plane": {
+        "image_path": "static/images/toys/retro-toy-plane.png",
+        "name": "Игрушечный ретро-самолет",
+        "price": "₽1299.00",
+        "desc": "Игрушечный самолет в стиле ретро. Изготовлен из керамики."
+      },
+      "tiger-gentleman-statue": {
+        "image_path": "static/images/toys/tiger-gentleman-statue.png",
+        "name": "Фигурка тигра-джентельмена",
+        "price": "₽1499.00",
+        "desc": "Статуэтка джентельмена с головой тигра. Изготовлен из керамики."
+      },
+      "dendy": {
+        "image_path": "static/images/toys/dendy.png",
+        "name": "Приставка \"Dendy\"",
+        "price": "₽7999.00",
+        "desc": "Оригинальная игровая приставка\"Dendy\"."
+      }
+    }
+  }
+}

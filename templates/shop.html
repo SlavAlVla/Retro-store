@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="static/css/shop.css">
+    <link rel="icon" href="static/images/icon.ico">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -36,72 +37,40 @@
                 </li>
             </ul>
             <ul class="header-nav__list header-list">
+                {% for category in assort %}
                 <li class="header-list__item header-list-item">
-                    <a href="#accessories" class="header-list-item__link">Аксессуары</a>
+                    <a href="#{{category}}" class="header-list-item__link">{{assort[category]['name']}}</a>
                 </li>
-                <li class="header-list__item header-list-item">
-                    <a href="#desk" class="header-list-item__link">Настольные принадлежности</a>
-                </li>
-                <li class="header-list__item header-list-item">
-                    <a href="#toys" class="header-list-item__link">Игрушки</a>
-                </li>
-                <li class="header-list__item header-list-item">
-                    <a href="#jackets" class="header-list-item__link">Куртки</a>
-                </li>
-                <li class="header-list__item header-list-item">
-                    <a href="#headdress" class="header-list-item__link">Головные уборы</a>
-                </li>
+                {% endfor %}
             </ul>
         </nav>
     </header>
     <!-- Главная часть -->
     <main class="body__main main">
-        <!-- Аксессуары -->
-        <section class="section-accessories accessories" id="accessories">
+        {% for category in assort %}
+        <!-- Секция категории -->
+        <section class="section-{{category}}" id="{{category}}">
             <!-- Заголовок -->
-            <h1 class="accessories__title section-title">АКСЕССУАРЫ</h1>
+            <h1 class="{{category}}__title section-title">{{assort[category]['name'] | upper}}</h1>
             <!-- Список -->
-            <ul class="accessories__list accessories-list products-list">
-                <figcaption class="news-list__product product" id="pendant">
-                    <a href="/products/pendant" class="product__link"></a>
-                    <img src="static/images/accessories/retro-pendant.png" alt="подвеска" class="product__image">
-                    <p class="product__name">Ретро подвеска</p>
-                    <p class="product__price">₽4999.00</p>
+            <ul class="{{category}}__list products-list">
+                {% for product in assort[category]["products"] %}
+                <figcaption class="products-list__product product">
+                    <a href="/products/{{category}}/{{product}}" class="product__link"></a>
+                    <img src="{{static/images/{{category}}/{{product}}.png}}" alt="{{product}}" class="product__image">
+                    <p class="product__name">{{assort[category]['products'][product]["name"]}}</p>
+                    <p class="product__price">{{assort[category]['products'][product]["price"]}}</p>
                 </figcaption>
-                <figcaption class="news-list__product product" id="glasses">
-                    <a href="/products/glasses" class="product__link"></a>
-                    <img src="static/images/accessories/retro-glasses.png" alt="очки" class="product__image">
-                    <p class="product__name">Ретро очки</p>
-                    <p class="product__price">₽1499.00</p>
-                </figcaption>
-                <figcaption class="news-list__product product" id="earrings">
-                    <img src="static/images/accessories/retro-earrings.png" alt="серьги" class="product__image">
-                    <p class="product__name">Ретро серьги</p>
-                    <p class="product__price">₽1999.00</p>
-                </figcaption>
-                <figcaption class="news-list__product product" id="ring">
-                    <img src="static/images/accessories/retro-ring.png" alt="кольцо" class="product__image">
-                    <p class="product__name">Ретро кольцо</p>
-                    <p class="product__price">₽2999.00</p>
-                </figcaption>
-                <figcaption class="news-list__product product" id="wallet">
-                    <img src="static/images/accessories/retro-wallet.png" alt="кошелек" class="product__image">
-                    <p class="product__name">Ретро кошелек</p>
-                    <p class="product__price">₽999.00</p>
-                </figcaption>
-                <figcaption class="news-list__product product" id="gloves">
-                    <img src="static/images/accessories/retro-gloves.png" alt="перчатки" class="product__image">
-                    <p class="product__name">Ретро перчатки</p>
-                    <p class="product__price">₽1499.00</p>
-                </figcaption>
+                {% endfor %}
             </ul>
         </section>
+        {% endfor %}
         <!-- Настольные принадлежности -->
-        <section class="section-desk desk" id="desk">
+        <!-- <section class="section-desk desk" id="desk"> -->
             <!-- Заголовок -->
-            <h1 class="desk__title section-title">НАСТОЛЬНЫЕ ПРИНАДЛЕЖНОСТИ</h1>
+            <!-- <h1 class="desk__title section-title">НАСТОЛЬНЫЕ ПРИНАДЛЕЖНОСТИ</h1> -->
             <!-- Список -->
-            <ul class="desk__list desk-list products-list">
+            <!-- <ul class="desk__list desk-list products-list">
                 <figcaption class="pop-list__product product" id="bottle-stand">
                     <img src="static/images/desk/retro-bottle-stand.png" alt="подставка для бутылок" class="product__image">
                     <p class="product__name">Подставка для бутылок в стиле ретро</p>
@@ -133,13 +102,13 @@
                     <p class="product__price">₽3499.00</p>
                 </figcaption>
             </ul>
-        </section>
+        </section> -->
         <!-- Игрушки -->
-        <section class="section-toys toys" id="toys">
+        <!-- <section class="section-toys toys" id="toys"> -->
             <!-- Заголовок -->
-            <h1 class="toys__title section-title">ИГРУШКИ</h1>
+            <!-- <h1 class="toys__title section-title">ИГРУШКИ</h1> -->
             <!-- Список -->
-            <ul class="toys__list toys-list products-list">
+            <!-- <ul class="toys__list toys-list products-list">
                 <figcaption class="pop-list__product product" id="plane">
                     <img src="static/images/toys/retro-plane.png" alt="фигурка самолёта" class="product__image">
                     <p class="product__name">Фигурка ретро самолета</p>
@@ -171,15 +140,15 @@
                     <p class="product__price">₽699.00</p>
                 </figcaption>
             </ul>
-        </section>
+        </section> -->
         <!-- Одежда -->
-        <section class="section-clothes clothes">
+        <!-- <section class="section-clothes clothes"> -->
             <!-- Заголовок -->
-            <h1 class="clothes__title section-title">ОДЕЖДА</h1>
+            <!-- <h1 class="clothes__title section-title">ОДЕЖДА</h1> -->
             <!-- Подзаголовок -->
-            <h2 class="clothes__subtitle section-subtitle" id="jackets">Куртки</h2>
+            <!-- <h2 class="clothes__subtitle section-subtitle" id="jackets">Куртки</h2> -->
             <!-- Список -->
-            <ul class="clothes__list clothes-list products-list">
+            <!-- <ul class="clothes__list clothes-list products-list">
                 <figcaption class="pop-list__product product" id="white-jacket">
                     <img src="static/images/clothes/jackets/white-jacket.png" alt="белая куртка" class="product__image">
                     <p class="product__name">Белая куртка</p>
@@ -210,11 +179,11 @@
                     <p class="product__name">Винтажная джинсовая куртка</p>
                     <p class="product__price">₽4199.00</p>
                 </figcaption>
-            </ul>
+            </ul> -->
             <!-- Подзаголовок -->
-            <h2 class="__subtitle section-subtitle" id="headdress">Головные уборы</h2>
+            <!-- <h2 class="__subtitle section-subtitle" id="headdress">Головные уборы</h2> -->
             <!-- Список -->
-            <ul class="clothes__list clothes-list products-list">
+            <!-- <ul class="clothes__list clothes-list products-list">
                 <figcaption class="news-list__product product" id="cap">
                     <img src="static/images/clothes/headdress/retro-cap.png" alt="кепка" class="product__image">
                     <p class="product__name">Ретро кепка</p>
@@ -246,7 +215,7 @@
                     <p class="product__price">₽1899.00</p>
                 </figcaption>
             </ul>
-        </section>
+        </section> -->
     </main>
     <!-- Подвал -->
     <footer class="body__footer footer">

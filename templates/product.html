@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/product.css">
+    <link rel="icon" href="/static/images/icon.ico">
     <script src="/static/script/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/static/css/slick.css"/>
-    <title>RETRO-STORE | {{product_name}}</title>
+    <title>RETRO-STORE | {{product['name']}}</title>
 </head>
 <body class="body">
     <!-- Шапка -->
@@ -40,11 +41,11 @@
     <main class="body__main main">
         <!-- Товар -->
         <section class="main__section-product product-section">
-            <img src="/{{product_image_path}}" alt="Картинка товара" class="product-section__image">
+            <img src="/{{product['image_path']}}" alt="Картинка товара" class="product-section__image">
             <span class="product-section__info info">
-                <h2 class="info__name section-title">{{product_name}}</h2>
-                <p class="info__price">{{product_price}}</p>
-                <p class="info__description">{{product_desc}}</p>
+                <h2 class="info__name section-title">{{product['name']}}</h2>
+                <p class="info__price">{{product['price']}}</p>
+                <p class="info__description">{{product['desc']}}</p>
                 <button class="info__to-cart dark-button">Купить</button>
             </span>
         </section>

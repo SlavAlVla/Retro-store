@@ -4,7 +4,7 @@
 }
 
 .product-section__image {
-    flex: 25;
+    width: 40vw;
     align-self: center;
     aspect-ratio: 1/1;
     object-fit: contain;
@@ -15,7 +15,6 @@
 }
 
 .info {
-    flex: 27;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

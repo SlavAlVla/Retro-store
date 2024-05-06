@@ -21,8 +21,8 @@
     border-radius: 40px;
 }
 
-/* Адаптация под смартфоны */
-@media (max-width: 767px) {
+/* Адаптация под смартфоны и планшеты */
+@media (max-width: 1199px) {
     .story-section, .story-section:nth-child(even) {
         flex-direction: column;
     }
